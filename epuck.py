@@ -230,8 +230,8 @@ class epuck:
         Input Params:
             Vel: [linear_vel, angular_vel]
         """
-        linear = vel[0]
-        angular = vel[1]
+        linear = vel[0] # Expressed in cm/s.
+        angular = vel[1] # Expressed in rad/s
 
         # Kinematic model for differential robot.
         wl = (linear - (WHEEL_SEPARATION / 2.) * angular) / WHEEL_DIAMETER
